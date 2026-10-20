@@ -11,7 +11,7 @@ Shenzhen FinTechathon (WeBank International Track, Topic B). The investor works 
 - a trade check: one planned trade against the investor's limits (verdict, reasons, before/after), with "I made this
   trade" for signed-in users.
 
-- Live: https://www.egoquant.app
+- Live: https://fintechaton-frontend.vercel.app
 - Backend (engine, agents, API): https://github.com/EgoQuantAI/egoquant-backend
 - Design and API notes: [Project.md](./Project.md); Next.js conventions for contributors: [AGENTS.md](./AGENTS.md)
 
