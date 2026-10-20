@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Byte-exact files: a sealed report is verified by hashing its exact bytes (SHA-256), so no checkout may rewrite a line ending
+# (Git for Windows with core.autocrlf=true turned the LF bytes into CRLF and the demo said "Does not match").
+public/demo-sealed-report.html -text
+public/demo-proof.json -text
+scripts/seal-v2/* -text

@@ -1,0 +1,351 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+/* Laptop screens about 768 px tall: one-screen steps tighten their spacing instead of scrolling. */
+/* A laptop screen (about 940 px high or less): the sidebar's spacing tightens first (declared before `short`, so `short` still wins below 820 px). */
+@custom-variant tight (@media (max-height: 940px));
+@custom-variant short (@media (max-height: 820px));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-heading: var(--font-instrument-serif);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* ─── Motion ──────────────────────────────────────────────────────────────────
+   Built from the design's own marks: rules draw from the left, a chosen option fills with ink
+   from its left border, and each new screen settles in once. Delays stagger with --eq-d. */
+
+@theme inline {
+  --ease-ink: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes eq-rise {
+  from { opacity: 0; transform: translateY(0.6rem); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes eq-draw {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes eq-enter {
+  from { opacity: 0; transform: translateX(1rem); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes eq-tick {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+/* A screen's opening: headline, then what follows it. */
+.eq-rise {
+  animation: eq-rise 700ms var(--ease-ink) both;
+  animation-delay: var(--eq-d, 0ms);
+}
+
+/* A divider that draws itself from the left. */
+.eq-rule {
+  transform-origin: left center;
+  animation: eq-draw 900ms var(--ease-ink) both;
+  animation-delay: var(--eq-d, 120ms);
+}
+
+/* A new question or step coming in after the person moves on. */
+.eq-enter {
+  animation: eq-enter 450ms var(--ease-ink) both;
+}
+
+/* A checkmark that writes itself. */
+.eq-tick {
+  animation: eq-tick 500ms var(--ease-ink) both;
+}
+
+/* Option buttons: the fill sweeps in from the left border when chosen. Selected buttons also keep
+   bg-zinc-900 in their classes, so they stay readable even if this rule is missing; the sweep runs
+   because the solid colour is held back (transparent) until the gradient has covered the button. */
+.eq-choice {
+  background-image: linear-gradient(var(--color-zinc-900), var(--color-zinc-900));
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 380ms var(--ease-ink), background-color 0ms linear 380ms,
+    color 200ms ease, border-color 200ms ease;
+}
+.eq-choice[aria-pressed="true"]:not(:disabled),
+.eq-choice[data-selected="true"] {
+  background-size: 100% 100%;
+}
+.eq-choice:not([aria-pressed="true"], [data-selected="true"]) {
+  transition: background-size 380ms var(--ease-ink), color 200ms ease, border-color 200ms ease;
+}
+
+/* Primary actions: the arrow leans forward on hover. */
+.eq-arrow {
+  display: inline-block;
+  transition: transform 300ms var(--ease-ink);
+}
+:is(a, button):hover > .eq-arrow,
+:is(a, button):focus-visible > .eq-arrow {
+  transform: translateX(0.25rem);
+}
+
+/* Text that is taller than its box fades out at the bottom instead of scrolling. (Not eq-fade: that name is the
+   fade-in animation below, and an element that only wants to appear must not lose its bottom third.) */
+.eq-clip {
+  mask-image: linear-gradient(to bottom, black 70%, transparent);
+}
+
+/* A small text link or button keeps its look; its tap area grows to 24 px or more (WCAG 2.2 target size), without moving anything. */
+.eq-tap {
+  position: relative;
+}
+.eq-tap::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem -0.35rem;
+}
+
+/* Section tabs: the active tab's rule draws itself from the left, like the dividers. */
+.eq-tab {
+  position: relative;
+}
+.eq-tab::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 -2px 0;
+  height: 2px;
+  background: var(--color-zinc-900);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 450ms var(--ease-ink);
+}
+.eq-tab[aria-selected="true"]::after {
+  transform: scaleX(1);
+}
+
+/* A countdown line, e.g. before the game deals the next round. */
+@keyframes eq-countdown {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
+.eq-countdown {
+  transform-origin: left center;
+  animation: eq-countdown var(--eq-t, 2000ms) linear both;
+}
+
+/* Lists that scroll inside a fixed box: a thin, quiet bar in the page's own greys. */
+.eq-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-zinc-300) transparent;
+  scroll-behavior: smooth;
+}
+.eq-scroll::-webkit-scrollbar { width: 6px; }
+.eq-scroll::-webkit-scrollbar-track { background: transparent; }
+.eq-scroll::-webkit-scrollbar-thumb { background: var(--color-zinc-300); }
+.eq-scroll:hover::-webkit-scrollbar-thumb { background: var(--color-zinc-500); }
+
+/* Popups: the backdrop fades in, the panel rises and settles. */
+@keyframes eq-backdrop { from { opacity: 0; } to { opacity: 1; } }
+@keyframes eq-pop {
+  from { opacity: 0; transform: translateY(1rem) scale(0.98); }
+  to   { opacity: 1; transform: none; }
+}
+.eq-backdrop { animation: eq-backdrop 250ms ease both; }
+.eq-pop { animation: eq-pop 450ms var(--ease-ink) both; }
+
+/* Slide decks (components/deck.tsx): the track glides; the arriving slide's content settles in a beat later. */
+.eq-deck {
+  transition: transform 700ms var(--ease-ink);
+  will-change: transform;
+}
+.eq-slide > * {
+  transition: opacity 500ms ease, transform 700ms var(--ease-ink);
+  opacity: 0.25;
+  transform: scale(0.985);
+}
+.eq-slide.is-current > * {
+  opacity: 1;
+  transform: none;
+  transition-delay: 120ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eq-rise, .eq-rule, .eq-enter, .eq-tick, .eq-backdrop, .eq-pop { animation: none; }
+  .eq-choice, .eq-arrow, .eq-tab::after, .eq-deck, .eq-slide > * { transition: none; }
+}
+
+/* Accessibility (WCAG AA), set once for the whole app.
+   1. Tailwind's zinc-400 is 2.6:1 on white and the quiet text of every page uses it; this shade is 4.9:1.
+   2. A keyboard focus ring that can be seen: the base layer above makes every outline a pale grey. */
+:root {
+  --color-zinc-400: #6e6e78;
+}
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid #18181b;
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* The waiting mark (components/ui/loader.tsx): three bars rise in turn. */
+@keyframes eq-loader {
+  0%, 100% { transform: scaleY(0.35); opacity: 0.35; }
+  45%      { transform: scaleY(1);    opacity: 1; }
+}
+.eq-loader-bar {
+  transform-origin: bottom center;
+  animation: eq-loader 900ms var(--ease-ink) infinite;
+}
+
+/* A section placeholder that shimmers while its data arrives. */
+@keyframes eq-shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+.eq-skeleton {
+  background-image: linear-gradient(90deg, transparent 0%, rgb(255 255 255 / 0.7) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: eq-shimmer 1.4s linear infinite;
+}
+
+/* A screen or section that appears softly instead of popping in. */
+@keyframes eq-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.eq-fade {
+  animation: eq-fade 300ms ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eq-loader-bar, .eq-skeleton, .eq-fade { animation: none; }
+}
