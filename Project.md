@@ -171,7 +171,7 @@ The PDF's numerical worked examples are illustrative, not production policies.
   briefing, Crash Test; the "not yet connected" statements were removed. Stray merge markers removed from this
   file. Validation: backend offline suite 1115 passed, 1 known failure (`tests/briefing/test_news_ui.py`,
   routed to its owner). No browser QA by this change.
-- 2026-10-18: Goal-based portfolio choice (backend `october18`, see CLAUDE.md decision 19): 100
+- 2026-10-18: Goal-based portfolio choice (backend `october18`, see DESIGN.md decision 19): 100
   candidates, Agent B shortlist of 5-20, 10,000-path block-bootstrap Monte Carlo on ~20 years of real
   returns (younger funds completed by Stambaugh/Page regression), highest goal probability chosen.
   Frontend: the goal view lists the funds whose early history was completed and the history note;

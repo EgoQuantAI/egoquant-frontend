@@ -1,13 +1,13 @@
 # UI decisions
 
-The record of Bideci's UI decisions for EgoQuant. **Savas's rule:** on any UI clash, a `binding` line here wins over every
-session (the Umut session, Uygar/Fable, everyone) except Savas. Read this before changing the UI.
+The record of Bideci's UI decisions for EgoQuant. **Savas's rule:** on any UI clash, a `binding` line here wins over everyone
+except Savas. Read this before changing the UI.
 
 - `binding`: Bideci said it (the source quotes his words, in Turkish when he wrote Turkish) or Bideci approved a commit.
-- `proposal`: not decided by Bideci. The current state, or an idea from Bideci's AI. Follow it unless you have a reason; ask
+- `proposal`: not decided by Bideci. The current state, or a suggestion. Follow it unless you have a reason; ask
   Bideci (through Savas) before changing it in a big way.
 
-Kept by Bideci's AI. Newest line at the bottom of each section. Change a line only with a new source; never delete one
+Newest line at the bottom of each section. Change a line only with a new source; never delete one
 (mark it `replaced by UI-xx`).
 
 ## Theme
@@ -39,16 +39,16 @@ Kept by Bideci's AI. Newest line at the bottom of each section. Change a line on
 | UI-26 | Stress tab: a plain description of what a stress test is. | 20 Oct | "Stress page describe" | binding |
 | UI-27 | Data tab: sections by heading that open and close (one open at a time), not one block of text. | 20 Oct | "datapage sadece yazı, onu baslıklara gore dropdown yap" | binding |
 | UI-28 | News tab: the tone scale reflects the data on screen (where the funds' tone sits, the matching band lit), never a fixed picture. | 20 Oct | "Tonescale … hep sabit onu fonksiyonel yap" | binding (the News tab is Aslan's lane; he decides how) |
-| UI-29 | Lists never hide their last rows behind a "more" label; the hint sits under the list. | 20 Oct | Bideci reported a bug at the bottom of the News tab; the fix is Bideci's AI's best guess, not confirmed | proposal |
+| UI-29 | Lists never hide their last rows behind a "more" label; the hint sits under the list. | 20 Oct | Bideci reported a bug at the bottom of the News tab; the fix is a best guess, not confirmed | proposal |
 
-| UI-30 | Invented sample histories (Investments IBKR step, Trade check) are always labelled "Invented example, not a real account", in the same greys as the rest. | 20 Oct | Umut session's `fix/umut-12` (5cf1c47), reviewed by Bideci's AI: no clash | proposal |
+| UI-30 | Invented sample histories (Investments IBKR step, Trade check) are always labelled "Invented example, not a real account", in the same greys as the rest. | 20 Oct | `fix/umut-12` (5cf1c47), reviewed: no clash | proposal |
 
 ## Advisor
 
 | ID | Decision | Date | Source | Status |
 |---|---|---|---|---|
 | UI-50 | The chat shows faces: the person's own profile picture beside their messages, and the Advisor has its own picture, beside its replies, in the panel header and on "Ask the Advisor" in the sidebar, to give it a personality. | 20 Oct | "Advisor ile konusurken bizim pp'de gozuksun ve advisorun de pp'si olsun, ask the advisor derken onu da gorelim bi kisilik katmak adina" | binding |
-| UI-51 | The Advisor's picture is an original black-and-white drawing (aviator sunglasses, short beard, dark coat and tie: `AdvisorAvatar` in `components/avatar.tsx`), inspired by the photo Bideci chose. That photo shows a real person and carries a stock-site watermark, so it is not used (likeness and copyright, and UI-01). A licensed or own photo can replace the drawing later. | 20 Oct | Bideci's AI, after Bideci's request | proposal |
+| UI-51 | The Advisor's picture is an original black-and-white drawing (aviator sunglasses, short beard, dark coat and tie: `AdvisorAvatar` in `components/avatar.tsx`), inspired by the photo Bideci chose. That photo shows a real person and carries a stock-site watermark, so it is not used (likeness and copyright, and UI-01). A licensed or own photo can replace the drawing later. | 20 Oct | After Bideci's request | proposal |
 
 ## Speed
 

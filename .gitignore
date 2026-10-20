@@ -44,3 +44,6 @@ next-env.d.ts
 
 # editor settings
 .idea/
+
+# written by next dev
+AGENTS.md
