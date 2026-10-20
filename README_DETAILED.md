@@ -13,7 +13,7 @@ Shenzhen FinTechathon (WeBank International Track, Topic B). The investor works 
 
 - Live: https://www.egoquant.app
 - Backend (engine, agents, API): https://github.com/EgoQuantAI/egoquant-backend
-- Design and API notes: [Project.md](./Project.md); Next.js conventions for contributors: [AGENTS.md](./AGENTS.md)
+- Design and API notes: [Project.md](./Project.md)
 
 **For judges:** start with `docs/judges/README.md` in the backend repository (https://github.com/EgoQuantAI/egoquant-backend): nine short documents, including the user guide and the on-chain seal. The screenshots the user guide uses are in [docs/screens](./docs/screens); the UI decisions are in [docs/UI_DECISIONS.md](./docs/UI_DECISIONS.md).
 
