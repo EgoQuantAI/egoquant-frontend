@@ -2,7 +2,7 @@
 
 This is the website of EgoQuant, a wealth-advisory agent we built for the 2026 Shenzhen FinTechathon (WeBank International Track, Topic B). The engine, the API and all the documents are in [egoquant-backend](https://github.com/EgoQuantAI/egoquant-backend); this repository is only the part you see in the browser.
 
-Live: https://www.egoquant.app (also https://fintechaton-frontend.vercel.app)
+Live: https://www.egoquant.app
 
 This is a snapshot of the version we submitted on 20 October 2026 (tag `submission-20oct`), in one commit. Our development history stays in a private repository.
 
