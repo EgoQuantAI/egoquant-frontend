@@ -274,11 +274,11 @@ Submission checklist:
 1. Technical documentation: system architecture, core algorithm description, security
 design.
 2. Presentation deck: final presentation of at most 10 minutes.
-3. Demo video: optional, at most 5 minutes.
+3. Optional item, delivered separately.
 4. Source code: README, GitHub repository link, deployment instructions, test cases.
 5. Security self-assessment report: permission-tier implementation and known-risk list.
 6. Execution evidence: for non-on-chain topics like ours, simulated-account or sandbox
-operation logs plus a demo video.
+operation logs.
 Submissions can be updated until the deadline; the latest version counts. Third-party
 data, code and open-source components must be properly licensed.
 After submission: online review by WeBank experts and scholars; finalists announced
@@ -1116,7 +1116,7 @@ What happens after a rejection (proposed: fall back to the next safer passing
 portfolio).
 Permission tiers for the security self-assessment report (not designed yet).
 Execution evidence: we need a simulated account or sandbox that produces operation
-logs, plus the demo video. Nothing is built for this yet.
+logs. Nothing is built for this yet.
 Privacy handling of trading logs and personal data (storage, retention, what the LLM
 sees).
 Results against a baseline for the deck: candidates are tone-scorer accuracy vs word
